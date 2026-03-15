@@ -8,6 +8,7 @@ import {
   MessageSquare,
   Briefcase,
   Settings,
+  ClipboardList,
 } from "lucide-react";
 
 const navItems = [
@@ -15,6 +16,7 @@ const navItems = [
   { href: "/agents", label: "Agents", icon: Bot },
   { href: "/enquiries", label: "Enquiries", icon: MessageSquare },
   { href: "/trade", label: "Trade Leads", icon: Briefcase },
+  { href: "/build-plan", label: "Build Plan", icon: ClipboardList },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
 

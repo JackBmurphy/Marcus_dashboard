@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "Marcus Operations Build Plan",
+    "subtitle": "The Wheel Specialist — last updated 2026-03-15",
+    "lastUpdated": "2026-03-15T13:30:00Z"
+  },
+  "sections": [
+    {
+      "id": "foundations",
+      "title": "Foundations & Identity",
+      "description": "Core system identity, governance, and operating rules.",
+      "tasks": [
+        { "id": "f1", "title": "Marcus identity defined (IDENTITY.md, SOUL.md)", "status": "done" },
+        { "id": "f2", "title": "Operating rules and governance absorbed", "status": "done" },
+        { "id": "f3", "title": "Quoting rules: no ranges, ask-then-price", "status": "done" },
+        { "id": "f4", "title": "Sandbox pricing matrix built", "status": "done", "notes": "pricing/sandbox-matrix-default.md — in use until live matrices provided" },
+        { "id": "f5", "title": "Live pricing matrices (per franchise)", "status": "blocked", "priority": "high", "owner": "Jack", "dueNote": "Monday 2026-03-17" }
+      ]
+    },
+    {
+      "id": "channels",
+      "title": "Channels",
+      "description": "Communication channels the agent operates on.",
+      "tasks": [
+        { "id": "ch1", "title": "WhatsApp connected and live", "status": "done", "notes": "Inbound enquiries active. Group messages disabled." },
+        { "id": "ch2", "title": "Instagram DM plugin downloaded", "status": "done", "notes": "~/.openclaw/plugins-src/openclaw-instagram — NOT connected yet. Pre-launch only." },
+        { "id": "ch3", "title": "Connect Instagram DM channel", "status": "todo", "priority": "medium", "notes": "Connect at pre-launch. Identical Customer Enquiries logic as WhatsApp." },
+        { "id": "ch4", "title": "Facebook Messenger", "status": "deferred", "notes": "No OpenClaw plugin exists. Feature request open on GitHub. Revisit when plugin ships." },
+        { "id": "ch5", "title": "Email (Outlook) — pilot setup", "status": "in-progress", "priority": "high", "notes": "Azure app registration emailed to IT (2026-03-15). Awaiting Tenant ID, Client ID, Client Secret. Pilot = dummy forwarding mailbox first." }
+      ]
+    },
+    {
+      "id": "workflow1",
+      "title": "Workflow 1 — Inbound Quote & Enquiry Follow-up",
+      "description": "The front-line customer enquiry workflow. Handles quotes, info gathering, and follow-up on WhatsApp (and Instagram at launch).",
+      "tasks": [
+        { "id": "w1-1", "title": "Workflow framework designed", "status": "done", "notes": "workflows/workflow-01-inbound-enquiry.md" },
+        { "id": "w1-2", "title": "Customer Enquiries Agent formally defined", "status": "done", "notes": "agents/01-customer-enquiries-agent.md" },
+        { "id": "w1-3", "title": "Follow-up cadence confirmed", "status": "done", "notes": "24h → +48h → +48h → stale" },
+        { "id": "w1-4", "title": "Turnaround time language confirmed", "status": "done", "notes": "Powder coat: next working day. DC: 3 working days. Always 'subject to availability'." },
+        { "id": "w1-5", "title": "Quote logging in place (markdown)", "status": "done", "notes": "quotes/quote-log.md — interim until CRM confirmed" },
+        { "id": "w1-6", "title": "Locations data loaded", "status": "done", "notes": "data/locations.md — 23 live franchises with address + phone" },
+        { "id": "w1-7", "title": "Test agent end-to-end on WhatsApp", "status": "in-progress", "priority": "high", "notes": "Jack to test with a live enquiry and confirm conversation flow is correct." },
+        { "id": "w1-8", "title": "Live pricing matrices loaded", "status": "blocked", "priority": "high", "owner": "Jack", "dueNote": "Monday 2026-03-17", "notes": "Sandbox in use until then." },
+        { "id": "w1-9", "title": "Website quote form integration", "status": "todo", "priority": "medium", "notes": "thewheelspecialist.co.uk/quote-request — does this feed into the workflow?" }
+      ]
+    },
+    {
+      "id": "workflow2",
+      "title": "Workflow 2 — Trade Business Development",
+      "description": "Outreach and follow-up with trade prospects (dealerships, garages, body shops, fleet operators).",
+      "tasks": [
+        { "id": "w2-1", "title": "Workflow framework drafted", "status": "in-progress", "notes": "workflows/workflow-02-trade-development.md" },
+        { "id": "w2-2", "title": "Trade Development Agent defined", "status": "todo", "priority": "high" },
+        { "id": "w2-3", "title": "Define: what counts as a trade lead?", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w2-4", "title": "Define: outreach cadence (timing + touches)", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w2-5", "title": "Define: auto-send vs human review threshold", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w2-6", "title": "Define: what outcome = qualified lead?", "status": "blocked", "priority": "medium", "owner": "Jack" },
+        { "id": "w2-7", "title": "Apollo.io API connected", "status": "in-progress", "priority": "medium", "notes": "API key received. Scaffold at integrations/apollo-trade-prospecting.md. Awaiting plan tier + prospect profile." },
+        { "id": "w2-8", "title": "Confirm Apollo plan tier (credit limits)", "status": "blocked", "priority": "medium", "owner": "Jack" },
+        { "id": "w2-9", "title": "Define priority prospect types", "status": "blocked", "priority": "medium", "owner": "Jack" },
+        { "id": "w2-10", "title": "CRM sync vs in-flight Apollo use decision", "status": "todo", "priority": "low", "owner": "Jack" }
+      ]
+    },
+    {
+      "id": "workflow3",
+      "title": "Workflow 3 — Complaints Handling",
+      "description": "Handling customer complaints, escalation rules, and resolution paths.",
+      "tasks": [
+        { "id": "w3-1", "title": "Workflow framework drafted", "status": "in-progress", "notes": "workflows/workflow-03-complaints.md" },
+        { "id": "w3-2", "title": "Define complaint categories", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w3-3", "title": "Define complaint severity levels", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w3-4", "title": "Define escalation path", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w3-5", "title": "Define: what can Marcus say automatically?", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w3-6", "title": "Define: what requires mandatory human sign-off?", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w3-7", "title": "Target response time for complaints", "status": "blocked", "priority": "medium", "owner": "Jack" },
+        { "id": "w3-8", "title": "Refund / remedy / compensation policy", "status": "blocked", "priority": "medium", "owner": "Jack" }
+      ]
+    },
+    {
+      "id": "workflow4",
+      "title": "Workflow 4 — National Account Allocation",
+      "description": "Allocating national accounts fairly across the franchise network.",
+      "tasks": [
+        { "id": "w4-1", "title": "Workflow framework drafted", "status": "in-progress", "notes": "workflows/workflow-04-national-accounts.md" },
+        { "id": "w4-2", "title": "Define: what is a national account?", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w4-3", "title": "Define allocation rules across the network", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w4-4", "title": "Define: who has final allocation authority?", "status": "blocked", "priority": "high", "owner": "Jack" },
+        { "id": "w4-5", "title": "Define: recommend only vs auto-assign?", "status": "blocked", "priority": "medium", "owner": "Jack" },
+        { "id": "w4-6", "title": "Define fairness principles", "status": "blocked", "priority": "medium", "owner": "Jack" },
+        { "id": "w4-7", "title": "Define minimum info required before allocation", "status": "blocked", "priority": "medium", "owner": "Jack" }
+      ]
+    },
+    {
+      "id": "crm",
+      "title": "CRM Integration — Separate Project",
+      "description": "Live CRM + calendar integration. Enables real booking availability, proper quote logging, and lead tracking. Not part of v1 agent activation.",
+      "tasks": [
+        { "id": "crm1", "title": "CRM platform confirmed", "status": "blocked", "priority": "high", "owner": "Jack / Devs", "notes": "Awaiting developer response (requested 2026-03-14)" },
+        { "id": "crm2", "title": "Review CRM API documentation", "status": "todo", "priority": "high" },
+        { "id": "crm3", "title": "Design integration architecture", "status": "todo", "priority": "high" },
+        { "id": "crm4", "title": "Build + test quote logging endpoint", "status": "todo", "priority": "high" },
+        { "id": "crm5", "title": "Build + test live calendar read access (per franchisee)", "status": "todo", "priority": "high", "notes": "Required for accurate booking availability." },
+        { "id": "crm6", "title": "Update agent prompts to use live calendar data", "status": "todo", "priority": "medium" },
+        { "id": "crm7", "title": "Replace quotes/quote-log.md with live CRM records", "status": "todo", "priority": "medium" },
+        { "id": "crm8", "title": "Lead status tracking (quoted → follow-up → booked → stale)", "status": "todo", "priority": "medium" }
+      ]
+    },
+    {
+      "id": "email",
+      "title": "Email Integration — Outlook",
+      "description": "Per-branch Outlook mailboxes (e.g. birmingham@thewheelspecialist.co.uk). Phased rollout: dummy pilot first, then all 23 branches.",
+      "tasks": [
+        { "id": "em1", "title": "Azure app registration requested from IT", "status": "done", "notes": "Emailed 2026-03-15. Requested: Tenant ID, Client ID, Client Secret, admin consent for Mail.ReadWrite + Mail.Send + Calendars.ReadWrite" },
+        { "id": "em2", "title": "Receive Azure credentials from IT", "status": "blocked", "priority": "high", "owner": "IT Team" },
+        { "id": "em3", "title": "Set up dummy forwarding mailbox for pilot", "status": "todo", "priority": "high", "owner": "Jack", "notes": "Branch emails forward to central dummy address for safe testing" },
+        { "id": "em4", "title": "Install Outlook Skill from ClaWHub", "status": "todo", "priority": "high" },
+        { "id": "em5", "title": "Connect pilot mailbox and test triage logic", "status": "todo", "priority": "high", "notes": "Phase 1: read + categorise + flag to Jack only. No auto-sending." },
+        { "id": "em6", "title": "Enable auto-responses for standard enquiries", "status": "todo", "priority": "medium", "notes": "Phase 2: only after triage accuracy verified." },
+        { "id": "em7", "title": "Roll out to all 23 branch mailboxes", "status": "todo", "priority": "medium", "notes": "Phase 3: replicate once pilot confirmed solid." }
+      ]
+    },
+    {
+      "id": "dashboard",
+      "title": "Franchisee Dashboard",
+      "description": "Web dashboard for franchisees and head office to monitor operations.",
+      "tasks": [
+        { "id": "d1", "title": "Dashboard built (Next.js)", "status": "done" },
+        { "id": "d2", "title": "Vercel deployment live", "status": "done", "notes": "github.com/JackBmurphy/Marcus_dashboard — auto-deploys on push" },
+        { "id": "d3", "title": "Build plan dashboard — data-driven from JSON", "status": "done", "notes": "data/build-plan.json — Marcus updates file, browser reflects on refresh" },
+        { "id": "d4", "title": "Define what data/views franchisees actually need", "status": "todo", "priority": "medium", "owner": "Jack" },
+        { "id": "d5", "title": "Connect dashboard to live CRM data", "status": "todo", "priority": "low", "notes": "Blocked on CRM integration project." },
+        { "id": "d6", "title": "Auth / login for franchisees", "status": "todo", "priority": "low" }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "meta": {
     "title": "Marcus Operations Build Plan",
     "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-15",
-    "lastUpdated": "2026-03-17T07:29:00Z"
+    "lastUpdated": "2026-03-17T13:00:00Z"
   },
   "sections": [
     {
@@ -468,7 +468,7 @@
     {
       "id": "email",
       "title": "Email Integration \u2014 Outlook",
-      "description": "Per-branch Outlook mailboxes (e.g. birmingham@thewheelspecialist.co.uk). Phased rollout: dummy pilot first, then all 23 branches.",
+      "description": "Per-branch Clook-hosted mailboxes via IMAP/SMTP (not Outlook/Azure). Phased rollout: dummy pilot first, then all 23 branches.",
       "tasks": [
         {
           "id": "em1",
@@ -478,10 +478,11 @@
         },
         {
           "id": "em2",
-          "title": "Receive Azure credentials from IT",
+          "title": "Receive IMAP/SMTP credentials from IT (per mailbox)",
           "status": "blocked",
           "priority": "high",
-          "owner": "IT Team"
+          "owner": "IT Team",
+          "notes": "IT confirmed mailboxes are on Clook (not Microsoft 365). Need: IMAP server + port, SMTP server + port, username + password per mailbox. Azure app registration not required."
         },
         {
           "id": "em3",
@@ -493,9 +494,10 @@
         },
         {
           "id": "em4",
-          "title": "Install Outlook Skill from ClaWHub",
-          "status": "todo",
-          "priority": "high"
+          "title": "Install Himalaya email CLI (IMAP/SMTP)",
+          "status": "done",
+          "priority": "high",
+          "notes": "Himalaya v1.2.0 installed at ~/bin/himalaya. Config template created at integrations/email-setup.md. Ready to connect once IT provides IMAP/SMTP credentials. (Note: clawhub doesn't exist — himalaya is the bundled OpenClaw skill for IMAP/SMTP.)"
         },
         {
           "id": "em5",
@@ -517,6 +519,22 @@
           "status": "todo",
           "priority": "medium",
           "notes": "Phase 3: replicate once pilot confirmed solid."
+        },
+        {
+          "id": "em8",
+          "title": "IMAP credentials \u2014 pilot mailbox",
+          "status": "blocked",
+          "priority": "high",
+          "owner": "Jack / IT",
+          "notes": "Need from IT: IMAP host, port, username, password for the pilot/dummy forwarding mailbox."
+        },
+        {
+          "id": "em9",
+          "title": "SMTP credentials \u2014 outbound sending",
+          "status": "blocked",
+          "priority": "high",
+          "owner": "Jack / IT",
+          "notes": "IT noted they use a separate SMTP server for outgoing mail. Need: SMTP host, port, username, password."
         }
       ]
     },

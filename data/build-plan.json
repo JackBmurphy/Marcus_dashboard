@@ -2,7 +2,7 @@
   "meta": {
     "title": "Marcus Operations Build Plan",
     "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-15",
-    "lastUpdated": "2026-03-15T17:00:00Z"
+    "lastUpdated": "2026-03-17T07:29:00Z"
   },
   "sections": [
     {
@@ -77,6 +77,12 @@
           "status": "in-progress",
           "priority": "high",
           "notes": "Azure app registration emailed to IT (2026-03-15). Awaiting Tenant ID, Client ID, Client Secret. Pilot = dummy forwarding mailbox first."
+        },
+        {
+          "id": "ch6",
+          "title": "Slack connected \u2014 #customer-complaints channel",
+          "status": "done",
+          "notes": "tws-ops account. Channel: #customer-complaints (C0ALQN1E942). Used for complaints escalation to Rob M (rob.m@tws-lfc.com)."
         }
       ]
     },
@@ -182,7 +188,7 @@
           "title": "Trade Development Agent defined",
           "status": "done",
           "priority": "high",
-          "notes": "agents/02-trade-development-agent.md — created 2026-03-15 evening. Pending Jack review + template approval before activation."
+          "notes": "agents/02-trade-development-agent.md \u2014 created 2026-03-15 evening. Pending Jack review + template approval before activation."
         },
         {
           "id": "w2-3",
@@ -248,16 +254,16 @@
         {
           "id": "w2-12",
           "title": "Draft outbound trade outreach messaging templates",
-          "status": "in-progress",
+          "status": "done",
           "priority": "high",
-          "notes": "Persona: Trade Relationship Manager, \"Marcus from The Wheel Specialist [City]\". Hook: speed + turnaround + quality guarantee (24-month powder coat, 12-month diamond cut). NOT cheapest, NOT OEM quality, NOT national coverage (branch-level only). Per-branch rate card applies. Core ask: trial job. Templates to be approved before activation."
+          "notes": "Approved by Jack 2026-03-15. Ready to activate once rate cards + postcode map received (Monday)."
         },
         {
           "id": "w2-13",
           "title": "Inbound trade enquiry workflow",
-          "status": "todo",
+          "status": "done",
           "priority": "medium",
-          "notes": "Less common but important to have. Trade enquiries arriving via WhatsApp/email should triage into Workflow 2 pipeline."
+          "notes": "Documented in workflows/workflow-02-inbound-trade-enquiry.md. Covers identification, triage, response, qualification, national account escalation. Trade lead log scaffolded at trade/trade-lead-log.md. Ready for activation once rate cards received."
         }
       ]
     },
@@ -337,44 +343,67 @@
         {
           "id": "w4-2",
           "title": "Define: what is a national account?",
-          "status": "blocked",
+          "status": "done",
           "priority": "high",
-          "owner": "Jack"
+          "owner": "Jack",
+          "notes": "National account = business requiring service across more than one TWS branch (insurers, fleet, dealer groups)."
         },
         {
           "id": "w4-3",
           "title": "Define allocation rules across the network",
-          "status": "blocked",
+          "status": "done",
           "priority": "high",
-          "owner": "Jack"
+          "owner": "Jack",
+          "notes": "Postcode territory map drives all allocation. Rob M is head office contact."
         },
         {
           "id": "w4-4",
           "title": "Define: who has final allocation authority?",
-          "status": "blocked",
+          "status": "done",
           "priority": "high",
-          "owner": "Jack"
+          "owner": "Jack",
+          "notes": "Rob M \u2014 rob.m@tws-lfc.com"
         },
         {
           "id": "w4-5",
           "title": "Define: recommend only vs auto-assign?",
-          "status": "blocked",
+          "status": "done",
           "priority": "medium",
-          "owner": "Jack"
+          "owner": "Jack",
+          "notes": "Marcus recommends based on postcode map. Rob M confirms."
         },
         {
           "id": "w4-6",
           "title": "Define fairness principles",
-          "status": "blocked",
+          "status": "done",
           "priority": "medium",
-          "owner": "Jack"
+          "owner": "Jack",
+          "notes": "No minimum volume \u2014 purely whether multiple branches are involved."
         },
         {
           "id": "w4-7",
           "title": "Define minimum info required before allocation",
           "status": "blocked",
           "priority": "medium",
-          "owner": "Jack"
+          "owner": "Jack",
+          "dueNote": "Today 2026-03-16",
+          "notes": "Postcode territory map + CRM access both required for allocation. CRM is a hard dependency \u2014 cannot allocate without it."
+        },
+        {
+          "id": "w4-8",
+          "title": "National Account Allocation Process Documentation",
+          "status": "blocked",
+          "priority": "high",
+          "owner": "Jack",
+          "notes": "Covers standard allocation + ~3 national accounts with dedicated portals (different process per portal). Required before Workflow 4 can be activated."
+        },
+        {
+          "id": "w4-9",
+          "title": "Per-portal process docs (3 main national accounts)",
+          "status": "blocked",
+          "priority": "medium",
+          "owner": "Jack",
+          "notes": "Each dedicated portal has a different process. Marcus needs these to interact with each portal correctly."
         }
       ]
     },

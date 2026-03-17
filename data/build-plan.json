@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Marcus Operations Build Plan",
-    "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-15",
-    "lastUpdated": "2026-03-17T13:00:00Z"
+    "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-17",
+    "lastUpdated": "2026-03-17T17:00:00Z"
   },
   "sections": [
     {
@@ -272,6 +272,18 @@
       "title": "Workflow 3 \u2014 Complaints Handling",
       "description": "Handling customer complaints, escalation rules, and resolution paths.",
       "tasks": [
+        {
+          "id": "w3-0",
+          "title": "Complaints Handling Agent formally defined",
+          "status": "done",
+          "notes": "agents/03-complaints-handling-agent.md — created 2026-03-17 evening. Covers triage, acknowledgement, fact gathering, escalation to Rob M, SLAs. Pending Jack review before activation."
+        },
+        {
+          "id": "w3-0b",
+          "title": "Complaint log file scaffolded",
+          "status": "done",
+          "notes": "complaints/complaint-log.md — interim tracking until CRM integration."
+        },
         {
           "id": "w3-1",
           "title": "Workflow framework drafted",

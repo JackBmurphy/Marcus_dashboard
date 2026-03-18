@@ -441,8 +441,9 @@
         {
           "id": "crm3",
           "title": "Design integration architecture",
-          "status": "todo",
-          "priority": "high"
+          "status": "done",
+          "priority": "high",
+          "notes": "Drafted 2026-03-18. Full technical brief at integrations/crm-integration-architecture.md — covers 4 phases (quote logging, calendar read, job history, trade pipeline), API shape per endpoint, questions for Stephen Campbell (Greyridge). Share with dev before the requirements call."
         },
         {
           "id": "crm4",

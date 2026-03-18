@@ -2,7 +2,7 @@
   "meta": {
     "title": "Marcus Operations Build Plan",
     "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-17",
-    "lastUpdated": "2026-03-17T17:00:00Z"
+    "lastUpdated": "2026-03-18T09:00:00Z"
   },
   "sections": [
     {
@@ -148,9 +148,9 @@
         {
           "id": "w1-9",
           "title": "Website quote form integration",
-          "status": "todo",
+          "status": "in-progress",
           "priority": "medium",
-          "notes": "thewheelspecialist.co.uk/quote-request \u2014 does this feed into the workflow?"
+          "notes": "ANALYSED 2026-03-18. /quote-request = self-service instant quote tool. /book-now = booking form — notifications fire to a configured email. Once IMAP pilot is live, submissions feed directly into Workflow 1 as warm leads. No new agent needed. See integrations/website-quote-form-analysis.md. Awaiting Jack: which email gets /book-now notifications, what fields does the form collect, does /quote-request send a notification email?"
         },
         {
           "id": "w1-10",

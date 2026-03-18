@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Marcus Operations Build Plan",
-    "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-17",
-    "lastUpdated": "2026-03-18T09:00:00Z"
+    "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-18",
+    "lastUpdated": "2026-03-18T09:26:00Z"
   },
   "sections": [
     {
@@ -150,25 +150,25 @@
           "title": "Website quote form integration",
           "status": "in-progress",
           "priority": "medium",
-          "notes": "ANALYSED 2026-03-18. /quote-request = self-service instant quote tool. /book-now = booking form — notifications fire to a configured email. Once IMAP pilot is live, submissions feed directly into Workflow 1 as warm leads. No new agent needed. See integrations/website-quote-form-analysis.md. Awaiting Jack: which email gets /book-now notifications, what fields does the form collect, does /quote-request send a notification email?"
+          "notes": "ANALYSED 2026-03-18. /quote-request = self-service instant quote tool. /book-now = booking form \u2014 notifications fire to a configured email. Once IMAP pilot is live, submissions feed directly into Workflow 1 as warm leads. No new agent needed. See integrations/website-quote-form-analysis.md. Awaiting Jack: which email gets /book-now notifications, what fields does the form collect, does /quote-request send a notification email?"
         },
         {
           "id": "w1-10",
           "title": "Receive and load customer interaction docs + brand guidelines",
-          "status": "blocked",
+          "status": "done",
           "priority": "high",
           "owner": "Jack",
           "dueNote": "Monday 2026-03-17",
-          "notes": "Jack to provide Monday. Required before WhatsApp test. Will update agent prompt and workflow docs once received."
+          "notes": "Received 2026-03-17. Sales & Marketing Manual (Sections B/C/D/E) + HOW2 process docs saved to reference/sales-manual/"
         },
         {
           "id": "w1-11",
           "title": "Postcode-to-branch allocation map",
-          "status": "blocked",
+          "status": "done",
           "priority": "high",
           "owner": "Jack",
           "dueNote": "Monday 2026-03-17",
-          "notes": "Jack to provide postcode breakdown \u2014 which postcodes route to which branch. Not simple nearest-branch logic. Used by CRM for routing and by Marcus to know which franchisee to act on behalf of."
+          "notes": "Received 2026-03-17. 2756 postcodes, 22 franchises. Saved to data/postcode-map.md and data/postcode-to-franchise.json"
         }
       ]
     },
@@ -276,13 +276,13 @@
           "id": "w3-0",
           "title": "Complaints Handling Agent formally defined",
           "status": "done",
-          "notes": "agents/03-complaints-handling-agent.md — created 2026-03-17 evening. Covers triage, acknowledgement, fact gathering, escalation to Rob M, SLAs. Pending Jack review before activation."
+          "notes": "agents/03-complaints-handling-agent.md \u2014 created 2026-03-17 evening. Covers triage, acknowledgement, fact gathering, escalation to Rob M, SLAs. Pending Jack review before activation."
         },
         {
           "id": "w3-0b",
           "title": "Complaint log file scaffolded",
           "status": "done",
-          "notes": "complaints/complaint-log.md — interim tracking until CRM integration."
+          "notes": "complaints/complaint-log.md \u2014 interim tracking until CRM integration."
         },
         {
           "id": "w3-1",
@@ -395,11 +395,11 @@
         {
           "id": "w4-7",
           "title": "Define minimum info required before allocation",
-          "status": "blocked",
+          "status": "done",
           "priority": "medium",
           "owner": "Jack",
           "dueNote": "Today 2026-03-16",
-          "notes": "Postcode territory map + CRM access both required for allocation. CRM is a hard dependency \u2014 cannot allocate without it."
+          "notes": "Postcode territory map received 2026-03-17. 2756 postcodes across 22 franchises."
         },
         {
           "id": "w4-8",
@@ -407,7 +407,7 @@
           "status": "blocked",
           "priority": "high",
           "owner": "Jack",
-          "notes": "Covers standard allocation + ~3 national accounts with dedicated portals (different process per portal). Required before Workflow 4 can be activated."
+          "notes": "Premia, APG, Fixico, S&G, EMaC process docs received 2026-03-17 \u2014 partial. Full complaints process still needed."
         },
         {
           "id": "w4-9",
@@ -427,10 +427,10 @@
         {
           "id": "crm1",
           "title": "CRM platform confirmed",
-          "status": "blocked",
+          "status": "in-progress",
           "priority": "high",
           "owner": "Jack / Devs",
-          "notes": "Awaiting developer response (requested 2026-03-14)"
+          "notes": "CRM developer (Stephen Campbell, Greyridge) responded 2026-03-16. API extension possible but needs requirements call. Jack to schedule call this week. See emails."
         },
         {
           "id": "crm2",
@@ -509,7 +509,7 @@
           "title": "Install Himalaya email CLI (IMAP/SMTP)",
           "status": "done",
           "priority": "high",
-          "notes": "Himalaya v1.2.0 installed at ~/bin/himalaya. Config template created at integrations/email-setup.md. Ready to connect once IT provides IMAP/SMTP credentials. (Note: clawhub doesn't exist — himalaya is the bundled OpenClaw skill for IMAP/SMTP.)"
+          "notes": "Himalaya v1.2.0 installed at ~/bin/himalaya. Config template created at integrations/email-setup.md. Ready to connect once IT provides IMAP/SMTP credentials. (Note: clawhub doesn't exist \u2014 himalaya is the bundled OpenClaw skill for IMAP/SMTP.)"
         },
         {
           "id": "em5",

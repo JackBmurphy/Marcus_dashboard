@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Marcus Operations Build Plan",
-    "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-18",
-    "lastUpdated": "2026-03-18T09:26:00Z"
+    "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-19",
+    "lastUpdated": "2026-03-19T09:00:00Z"
   },
   "sections": [
     {
@@ -347,6 +347,12 @@
       "description": "Allocating national accounts fairly across the franchise network.",
       "tasks": [
         {
+          "id": "w4-0",
+          "title": "National Account Allocation Agent formally defined",
+          "status": "done",
+          "notes": "agents/04-national-accounts-agent.md \u2014 created 2026-03-18 evening. Covers all 4 accounts (S\u0026G, APG, Premia, Fixico), job parsing, postcode allocation, Rob M routing, CRM write spec. Pending Jack review before activation."
+        },
+        {
           "id": "w4-1",
           "title": "Workflow framework drafted",
           "status": "in-progress",
@@ -599,6 +605,71 @@
           "status": "todo",
           "priority": "low",
           "notes": "Local dev (localhost:3000) is default for now. Push to GitHub triggers auto-deploy when needed."
+        }
+      ]
+    },
+    {
+      "id": "system-infra",
+      "title": "System Infrastructure (K1–K8)",
+      "description": "Health monitoring, cost tracking, security, version control, and backup infrastructure. Added 2026-03-19.",
+      "tasks": [
+        {
+          "id": "k1",
+          "title": "K1 — Health Monitoring Heartbeat System",
+          "status": "todo",
+          "priority": "high",
+          "notes": "Daily automated checks: gateway health, WhatsApp channel, model API, data integrity, open quote follow-ups, disk space, API key expiry. Summary to Discord #marcus-setup at 08:00 GMT. Needs heartbeat cron configured. Jack to confirm check list before build."
+        },
+        {
+          "id": "k2",
+          "title": "K2 — Model Usage and Cost Tracking",
+          "status": "todo",
+          "priority": "medium",
+          "notes": "Log every AI API call — model, task type, tokens (in/out/cache), estimated cost, session ID, channel. Daily/weekly/monthly reports. JSONL at data/usage-logs/YYYY-MM-DD.jsonl. Needs confirmation of what token data is accessible via session_status."
+        },
+        {
+          "id": "k3",
+          "title": "K3 — AI Writing Humanizer",
+          "status": "todo",
+          "priority": "medium",
+          "notes": "Post-process outbound copy to remove AI patterns, over-formal language, excessive hedging. Applies to customer WhatsApp, trade outreach, complaints, follow-ups. Much achievable via SOUL.md tone rules. Full humanizer agent is a separate build — needs spec."
+        },
+        {
+          "id": "k4",
+          "title": "K4 — Git Auto-Sync",
+          "status": "todo",
+          "priority": "high",
+          "notes": "Auto-commit and push workspace changes every 6 hours + on significant events (SOUL.md update, pricing update, new agent definition). Depends on marcus-core repo (K8) being created first. Straightforward cron job once remote is set.",
+          "owner": "Jack (repo creation)"
+        },
+        {
+          "id": "k5",
+          "title": "K5 — Database Backup",
+          "status": "todo",
+          "priority": "medium",
+          "notes": "Daily incremental to ~/.openclaw/backups/YYYY-MM-DD/. Weekly push to GitHub (marcus-core). Monthly full export to offsite (cloud TBC). Covers: data/, agents/, workflows/, quotes/, complaints/, trade/, integrations/, SOUL.md, MEMORY.md, build status. 30 daily / 12 weekly / unlimited monthly retention."
+        },
+        {
+          "id": "k6",
+          "title": "K6 — Security and Safety Layers",
+          "status": "in-progress",
+          "priority": "high",
+          "notes": "Rules-based items (prompt injection defence, data protection, approval gates) implemented in SOUL.md + AGENTS.md. Automated checks (nightly credential scan, gateway exposure check, MEMORY.md scan, repo size monitor) to be added to K1 heartbeat."
+        },
+        {
+          "id": "k7",
+          "title": "K7 — Security Council Nightly Codebase Review",
+          "status": "todo",
+          "priority": "medium",
+          "notes": "Nightly 3:30am review from 4 perspectives: offensive, defensive, data privacy, operational realism. Numbered findings (Critical/High/Medium/Low). Critical = immediate Discord alert. Interactive: Jack can reply 'expand [N]' for details. Non-trivial build — needs cron + isolated subagent. Scoping required before implementation."
+        },
+        {
+          "id": "k8",
+          "title": "K8 — marcus-core Private Git Repository",
+          "status": "blocked",
+          "priority": "high",
+          "owner": "Jack",
+          "notes": "Jack to create JackBmurphy/marcus-core (private) on GitHub. Add PAT with push access. Set as git remote for workspace. Enables K4 auto-sync, version control of the Marcus system, and future forking for multi-branch / multi-business deployments. Everything else is ready to go."
         }
       ]
     }

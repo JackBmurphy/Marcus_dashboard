@@ -2,7 +2,7 @@
   "meta": {
     "title": "Marcus Operations Build Plan",
     "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-19",
-    "lastUpdated": "2026-03-19T13:00:00Z"
+    "lastUpdated": "2026-03-19T17:00:00Z"
   },
   "sections": [
     {
@@ -638,9 +638,9 @@
         {
           "id": "k5",
           "title": "K5 — Database Backup",
-          "status": "todo",
+          "status": "done",
           "priority": "medium",
-          "notes": "Daily incremental to ~/.openclaw/backups/YYYY-MM-DD/. Weekly push to GitHub (marcus-core). Monthly full export to offsite (cloud TBC). Covers: data/, agents/, workflows/, quotes/, complaints/, trade/, integrations/, SOUL.md, MEMORY.md, build status. 30 daily / 12 weekly / unlimited monthly retention."
+          "notes": "Done 2026-03-19 evening. scripts/backup.sh created — rsync all critical dirs + files to ~/.openclaw/backups/YYYY-MM-DD/. First backup ran successfully (19 items). Cron scheduled at 02:00 GMT daily. 30-day retention enforced. Weekly/monthly offsite deferred until marcus-core repo (K8) is created."
         },
         {
           "id": "k6",

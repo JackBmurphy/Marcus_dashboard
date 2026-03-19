@@ -2,7 +2,7 @@
   "meta": {
     "title": "Marcus Operations Build Plan",
     "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-19",
-    "lastUpdated": "2026-03-19T09:00:00Z"
+    "lastUpdated": "2026-03-19T13:00:00Z"
   },
   "sections": [
     {
@@ -34,10 +34,8 @@
         {
           "id": "f5",
           "title": "Live pricing matrices (per franchise)",
-          "status": "blocked",
-          "priority": "high",
-          "owner": "Jack",
-          "dueNote": "Monday 2026-03-17"
+          "status": "done",
+          "notes": "Received 2026-03-18. All 21 branches loaded into data/branch-pricing.json."
         }
       ]
     },
@@ -130,20 +128,15 @@
         {
           "id": "w1-7",
           "title": "Test agent end-to-end on WhatsApp",
-          "status": "blocked",
+          "status": "todo",
           "priority": "high",
-          "notes": "Blocked until Jack provides: (1) customer interaction documentation, (2) brand guidelines. Full end-to-end WhatsApp test happens once these are loaded.",
-          "owner": "Jack",
-          "dueNote": "Monday 2026-03-17"
+          "notes": "Customer interaction docs + brand guidelines received 2026-03-17. Pricing matrix live. Unblocked — ready for Jack to send a test enquiry."
         },
         {
           "id": "w1-8",
           "title": "Live pricing matrices loaded",
-          "status": "blocked",
-          "priority": "high",
-          "owner": "Jack",
-          "dueNote": "Monday 2026-03-17",
-          "notes": "Sandbox in use until then."
+          "status": "done",
+          "notes": "All 21 branches loaded into data/branch-pricing.json (2026-03-18)."
         },
         {
           "id": "w1-9",

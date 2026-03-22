@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Marcus Operations Build Plan",
-    "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-19",
-    "lastUpdated": "2026-03-19T17:00:00Z"
+    "subtitle": "The Wheel Specialist \u2014 last updated 2026-03-22",
+    "lastUpdated": "2026-03-22T09:00:00Z"
   },
   "sections": [
     {
@@ -71,10 +71,10 @@
         },
         {
           "id": "ch5",
-          "title": "Email (Outlook) \u2014 pilot setup",
+          "title": "Email (Clook IMAP/SMTP) \u2014 pilot setup",
           "status": "in-progress",
           "priority": "high",
-          "notes": "Azure app registration emailed to IT (2026-03-15). Awaiting Tenant ID, Client ID, Client Secret. Pilot = dummy forwarding mailbox first."
+          "notes": "IT confirmed Clook hosting (not Microsoft 365) \u2014 Azure app registration not needed. Himalaya v1.2.0 installed. Awaiting IMAP/SMTP credentials from IT. Pilot = dummy forwarding mailbox first."
         },
         {
           "id": "ch6",
@@ -479,7 +479,7 @@
     },
     {
       "id": "email",
-      "title": "Email Integration \u2014 Outlook",
+      "title": "Email Integration \u2014 Clook IMAP/SMTP",
       "description": "Per-branch Clook-hosted mailboxes via IMAP/SMTP (not Outlook/Azure). Phased rollout: dummy pilot first, then all 23 branches.",
       "tasks": [
         {
